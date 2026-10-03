@@ -548,16 +548,31 @@ h1, h2, h3 {
   margin-bottom: 32px;
 }
 
-.newsletter-note {
-  margin-top: 40px;
-  padding-top: 32px;
+.newsletter {
+  margin-top: 48px;
+  padding-top: 40px;
   border-top: 1px solid rgba(255,255,255,0.18);
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.72);
+  scroll-margin-top: 80px;
 }
 
-.newsletter-note strong {
-  color: var(--lime);
+.newsletter-intro {
+  color: rgba(255,255,255,0.82);
+  margin: 10px 0 24px;
+}
+
+.newsletter-form {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  height: 580px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+@media (max-width: 560px) {
+  .newsletter-form { height: 740px; }
 }
 
 /* ---------- Footer ---------- */
