@@ -883,3 +883,66 @@ h1, h2, h3 {
   margin: -12px 0 24px;
   font-weight: 600;
 }
+
+/* Newsletter hub banner */
+
+.nl-hero--banner {
+  padding: 56px 0;
+  overflow: hidden;
+}
+
+.nl-hero--banner .wrap {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.nl-hero--banner h1 { font-size: 2.8rem; }
+
+.nl-hero .nl-banner-badge {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(169,204,62,0.16);
+  color: var(--lime);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.nl-banner-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.nl-banner-art img {
+  width: 100%;
+  height: auto;
+  margin: -4% 0;
+  animation: nl-float 6s ease-in-out infinite;
+}
+
+@keyframes nl-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-1.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nl-banner-art img { animation: none; }
+}
+
+@media (max-width: 880px) {
+  .nl-hero--banner .wrap { grid-template-columns: 1fr; gap: 8px; }
+  .nl-hero--banner h1 { font-size: 2.3rem; }
+  .nl-banner-art { order: -1; }
+  .nl-banner-art img { margin: -6% 0 0; }
+}
+
+@media (max-width: 560px) {
+  .nl-banner-ctas { flex-direction: column; align-items: stretch; }
+  .nl-banner-ctas .btn { text-align: center; }
+}
