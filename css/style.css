@@ -564,7 +564,7 @@ h1, h2, h3 {
   display: block;
   width: 100%;
   max-width: 540px;
-  height: 580px;
+  height: 620px;
   margin: 0 auto;
   border: 0;
   border-radius: 8px;
@@ -572,7 +572,7 @@ h1, h2, h3 {
 }
 
 @media (max-width: 560px) {
-  .newsletter-form { height: 740px; }
+  .newsletter-form { height: 860px; }
 }
 
 /* ---------- Footer ---------- */
