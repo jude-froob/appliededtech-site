@@ -712,9 +712,65 @@ h1, h2, h3 {
   color: rgba(255,255,255,0.7);
 }
 
+/* Issue hero (from 16 Oct 2026): this week's headline, a one-line dek and a button to the lead story */
+.nl-hero .nl-dek {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 22px;
+}
+
+.nl-hero .nl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.nl-hero .nl-hero-actions .nl-date { margin: 0; }
+
 .nl-body {
   padding: 64px 0 80px;
 }
+
+/* "Top stories this week": bold headline with a short teaser underneath */
+.nl-top {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px 28px 10px;
+  margin-bottom: 48px;
+  box-shadow: 0 1px 3px rgba(31,31,46,0.08);
+}
+
+.nl-top h2 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 14px;
+}
+
+.nl-top ul { list-style: none; }
+
+.nl-top li { margin: 0 0 16px; }
+
+.nl-top a { display: block; text-decoration: none; }
+
+.nl-top strong {
+  display: block;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: var(--violet);
+}
+
+.nl-top span {
+  display: block;
+  font-size: 0.95rem;
+  color: rgba(31,31,46,0.75);
+}
+
+.nl-top a:hover strong { color: var(--magenta); }
 
 .nl-body .wrap {
   max-width: 760px;
@@ -871,7 +927,7 @@ h1, h2, h3 {
 @media (max-width: 560px) {
   .nl-hero { padding: 52px 0 44px; }
   .nl-hero h1 { font-size: 2rem; }
-  .nl-contents, .nl-latest, .nl-cta { padding: 22px 20px; }
+  .nl-contents, .nl-top, .nl-latest, .nl-cta { padding: 22px 20px; }
 }
 
 .nl-back {
